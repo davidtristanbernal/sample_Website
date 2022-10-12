@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+</head>
+<body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Registration</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('friends') }}">Friends</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('registration') }}">Registration</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    <h3>Register the customer, fill the following form.</h3>
+    <form action = "http://localhost:5000/register" method = "POST">
+        <p>Name <input type = "text" name = "name" /></p>
+        <p>Email <input type = "email" name = "email" /></p>
+        <p>Contact <input type = "text" name = "contact" /></p>
+        <p>Pin code <input type ="text" name = "pin" /></p>
+        <p><input type = "submit" value = "submit" /></p>
+    </form>
+</body>
+</html>
